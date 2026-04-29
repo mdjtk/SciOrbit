@@ -1,0 +1,217 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Campus Directory | Science Orbit">
+    <div class="max-w-screen-2xl mx-auto px-8 py-12">
+        <!-- Hero Section -->
+        <section class="mb-16 relative">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-8">
+                <div class="max-w-2xl">
+                    <h1 class="font-headline text-5xl font-bold tracking-tight text-primary mb-4 leading-tight">
+                        Campus <span class="text-secondary">Directory</span>
+                    </h1>
+                    <p class="text-on-surface-variant text-lg max-w-lg">
+                        Explore the Weightless Laboratory ecosystem. From foundational junior wings to specialized senior research centers.
+                    </p>
+                </div>
+                <div class="flex bg-surface-container-high p-1 rounded-xl">
+                    <button class="px-4 py-2 rounded-lg bg-surface-container-lowest shadow-sm flex items-center gap-2 text-sm font-medium">
+                        <span class="material-symbols-outlined text-sm">grid_view</span> Grid
+                    </button>
+                    <button class="px-4 py-2 rounded-lg hover:bg-surface-container-lowest/50 flex items-center gap-2 text-sm font-medium text-slate-500">
+                        <span class="material-symbols-outlined text-sm">list</span> List
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Filters -->
+        <section class="mb-12 flex flex-col md:flex-row gap-6 items-center bg-surface-container-low p-6 rounded-3xl">
+            <div class="flex-1 w-full relative">
+                <span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-secondary">explore</span>
+                <input class="w-full pl-12 pr-4 py-4 rounded-2xl border-none ring-1 ring-outline-variant/20 bg-surface-container-lowest focus:ring-2 focus:ring-secondary/20 transition-all shadow-sm" placeholder="Filter by campus name or city..." type="text"/>
+            </div>
+            <div class="flex gap-3 overflow-x-auto no-scrollbar w-full md:w-auto">
+                <button class="whitespace-nowrap px-6 py-3 rounded-full bg-secondary text-white text-sm font-bold shadow-md hover:bg-secondary/90 transition-colors">All Wings</button>
+                <button class="whitespace-nowrap px-6 py-3 rounded-full bg-white text-on-surface-variant text-sm font-medium hover:bg-surface-container shadow-sm transition-colors border border-slate-200">Senior Wing</button>
+                <button class="whitespace-nowrap px-6 py-3 rounded-full bg-white text-on-surface-variant text-sm font-medium hover:bg-surface-container shadow-sm transition-colors border border-slate-200">Junior Wing</button>
+                <button class="whitespace-nowrap px-6 py-3 rounded-full bg-white text-on-surface-variant text-sm font-medium hover:bg-surface-container shadow-sm transition-colors border border-slate-200">Foundation</button>
+            </div>
+        </section>
+
+        <!-- Campus Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <!-- Senior Campus 1 -->
+            <div class="md:col-span-8 group">
+                <div class="relative h-full flex flex-col bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-[0_20px_40px_rgba(0,51,69,0.04)] transition-all duration-300 hover:translate-y-[-4px] border border-slate-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img alt="Senior High School Campus" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpLzop7Uvb7HoDWjY89OM97k-17i6NDL-ffA_8tvq2MFj-kMoF0-15vU6Q1_FBXk7dGU8s0DywimLgyh9HoOz7vZ3cpLH3mrM5hbrQhG53TLKhiXp_NDDbhIilWfxgNVulwC-ihPhGrWCLgdC4i2ereU-w3bBw5JwApYt5xvDx_6GHEz4PAgzFQwLz2aT3M4ogPF3tL7Q8XNzOgZApUa0TzOWeOyHPgRer0YJ25DkGYZ3RClo3Ghn8W7rdm2NwbUzIlySzM3wIBJE"/>
+                        <div class="absolute top-6 left-6 flex gap-2">
+                            <span class="px-4 py-1.5 rounded-full bg-primary/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest">Senior Wing</span>
+                            <span class="px-4 py-1.5 rounded-full bg-secondary/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest">A+ Grade</span>
+                        </div>
+                    </div>
+                    <div class="p-10 flex-1 grid md:grid-cols-2 gap-10">
+                        <div class="flex flex-col justify-between">
+                            <div>
+                                <h2 class="font-headline text-3xl font-bold text-primary mb-2">Alpha Centauri Senior Hub</h2>
+                                <p class="text-on-surface-variant font-label text-sm uppercase tracking-wider mb-6">Sector 7 • Academic District</p>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-4 text-on-surface">
+                                        <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-secondary">science</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs font-bold text-secondary uppercase tracking-tighter">Available Streams</p>
+                                            <p class="text-sm">Science, Commerce, Humanities</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-4 text-on-surface">
+                                        <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-secondary">groups</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs font-bold text-secondary uppercase tracking-tighter">Student Enrollment</p>
+                                            <p class="text-sm">2,450 Scholars</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="mt-8 w-fit px-8 py-3 rounded-xl bg-gradient-to-br from-primary to-primary-container text-white font-bold text-sm shadow-lg hover:opacity-90 transition-all" onclick="alert('Viewing Campus Profile')">
+                                View Campus Profile
+                            </button>
+                        </div>
+                        <div class="flex flex-col items-center justify-center bg-surface-container-low rounded-[2rem] p-6 relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #006972 1px, transparent 0); background-size: 24px 24px;"></div>
+                            <div class="relative z-10 text-center">
+                                <div class="w-24 h-24 rounded-full border-4 border-white shadow-xl overflow-hidden mb-4 mx-auto">
+                                    <img alt="Principal" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWmMCOO_cNRY-Tu6sx_M4gjqnCt6oJmtaArxIUspUPYXQfgb0GWSABVua36T6LHlaWljZY31n1S2wyyHSGQJLOqUuOkt9sm25ZWdRbFdYBKWd1mjySRU4nDwOGbBLXhwCCUHP56NiF-R5PdaRKfb5v2mWL5ogl4zlo4BTmGMoCwoHetLHYCCoELt7xUgo-ueY79QEpeHONyLoiXu9xbseQS3npLMPQXPOiRsKtE5MPyTT6LBgcCEnxmqS4U5Zrsc87Bx_bxWe1dGE"/>
+                                </div>
+                                <h3 class="font-headline font-bold text-primary">Dr. Julian Vance</h3>
+                                <p class="text-xs text-on-surface-variant italic mb-4">Campus Principal</p>
+                                <div class="rounded-2xl overflow-hidden h-32 w-full shadow-inner ring-1 ring-white relative">
+                                    <img alt="Map" class="w-full h-full object-cover opacity-80 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEzwWExboSzivU2YdZhYCyciGHExvqSPpkBU67319ch8ZNaA2LSCfX-FX9JdJSErR6E4MVEPVbUJ-Zx5orOWsyMsEEU_EzG695Dr-lwxsnI_CU4vIPkKYue9oAnmaUaF-nGymL_uvHWiOMdTzCtFPsPTfp5A_7WRWQfeEklec64FNOjyOqPhVees7GEu7eMAKjI5kKJSZER583IW7FADrpmweXPXooGb3PJbXHcmhoIggZ1KVGl2-5HihtOxcuzb-p6TAMCsoCrHM"/>
+                                    <div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+                                    	<span class="px-3 py-1 bg-white shadow-md text-xs font-bold rounded-lg text-primary flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Kochi Sector</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Junior Campus 1 -->
+            <div class="md:col-span-4">
+                <div class="h-full flex flex-col bg-surface-container-low rounded-[2rem] border-l-4 border-tertiary p-8 shadow-sm group">
+                    <div class="mb-6 flex justify-between items-start">
+                        <span class="px-4 py-1.5 rounded-full bg-tertiary/10 text-tertiary text-[10px] font-bold uppercase tracking-widest">Junior Wing</span>
+                        <div class="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center">
+                            <span class="material-symbols-outlined text-tertiary">child_care</span>
+                        </div>
+                    </div>
+                    <h2 class="font-headline text-2xl font-bold text-primary mb-2">Pioneer Foundation</h2>
+                    <p class="text-sm text-on-surface-variant mb-6">Middle School Excellence • North Orbit</p>
+                    
+                    <div class="space-y-6 flex-1">
+                        <div class="p-4 rounded-2xl bg-white/50 backdrop-blur-sm border border-slate-100">
+                            <p class="text-[10px] font-bold text-tertiary uppercase tracking-wider mb-2">Core Focus</p>
+                            <p class="text-sm text-on-surface leading-relaxed">Early Scientific Inquiry & Computational Thinking</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center p-4 rounded-2xl bg-white/50 border border-slate-100">
+                                <p class="text-xl font-bold text-primary">850</p>
+                                <p class="text-[10px] text-on-surface-variant uppercase font-bold mt-1">Students</p>
+                            </div>
+                            <div class="text-center p-4 rounded-2xl bg-white/50 border border-slate-100">
+                                <p class="text-xl font-bold text-primary">12:1</p>
+                                <p class="text-[10px] text-on-surface-variant uppercase font-bold mt-1">Ratio</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-outline-variant/10">
+                        <div class="flex items-center gap-3">
+                            <img alt="Principal" class="w-10 h-10 rounded-full object-cover grayscale hover:grayscale-0 transition-all border-2 border-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtuKIUh5H0IUzS06ZUc6_4UZ5z_y2UUOM6FaY7by87ABjYONo3vhyE4ePpYCkLTX_Q_UEXoN0OHb7wbnwGoJlT-tQNngRSSaz8jhkm_piFFbm4ZwEZOpP6bIX8vyjGBghMtqOpKwF7tycSBR3mSVqW-3KKVPc0Dj6ZJUZldbgLEGGcVflvtnwyy0f2zftLzCWrjb-BaxIjYGRqpOYxs27Uho56Lqfu9oN-ZNXdNwGux2v6HD5nBvxVE9WHujvNff3umgvLQNWCHDU"/>
+                            <div>
+                                <p class="text-sm font-bold text-primary">Sarah Jenkins</p>
+                                <p class="text-[10px] text-on-surface-variant">Lead Educator</p>
+                            </div>
+                            <button class="ml-auto w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center transition-transform active:scale-90 hover:bg-primary-container">
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Card - Asymmetric Layout -->
+            <div class="md:col-span-4 h-full">
+                <div class="bg-primary text-white rounded-[2rem] p-10 relative overflow-hidden h-full shadow-lg">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/30 rounded-full blur-3xl -mr-20 -mt-20"></div>
+                    <div class="relative z-10">
+                        <h3 class="font-headline text-4xl font-light mb-8 opacity-90">Global <br/><span class="font-bold">Footprint</span></h3>
+                        <div class="space-y-10">
+                            <div>
+                                <p class="text-secondary text-4xl font-bold">12</p>
+                                <p class="text-slate-300 text-sm font-label tracking-widest uppercase mt-1">Research Campuses</p>
+                            </div>
+                            <div>
+                                <p class="text-secondary text-4xl font-bold">18.5k</p>
+                                <p class="text-slate-300 text-sm font-label tracking-widest uppercase mt-1">Active Scholars</p>
+                            </div>
+                            <div>
+                                <p class="text-secondary text-4xl font-bold">100%</p>
+                                <p class="text-slate-300 text-sm font-label tracking-widest uppercase mt-1">Lab Access</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle School Card -->
+            <div class="md:col-span-8 group">
+                <div class="bg-surface-container-lowest rounded-[2rem] overflow-hidden flex flex-col md:flex-row h-full shadow-sm hover:shadow-xl transition-shadow border border-slate-100">
+                    <div class="md:w-1/2 relative h-64 md:h-auto overflow-hidden bg-slate-100">
+                        <img alt="Campus architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChOwDlRLCdUJHZRkQUjPyymNROKDdtzSImd9cKQcAxQknR4WjH7UjKSu3ytHPToF8xQMx7_Sl91YjAzBh7nkCUk2mF2Bp6HGVyCNx9Kbtjxt0_Au7WPCk7PpYcYcgsXCP1MDRgV9DvmgblcmMWaP8gfkIvDVTE-Nc4dqRyIvvZJ2pZF6j-WcbxncWiQv60zg1jsC2kA77RGhZHlrqYamF5xg6qPSmT3qZ5z_zX0lx45hao9kmmjgJAKMfusBOGHFWuBUgqWmAA1XU"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-8">
+                            <span class="px-4 py-2 bg-white/20 backdrop-blur-md rounded-xl text-white text-xs border border-white/20 shadow-lg font-bold tracking-wider">West Orbit Campus</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-10 flex flex-col justify-between">
+                        <div>
+                            <span class="px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-[10px] font-bold uppercase tracking-widest mb-4 inline-block">Middle School</span>
+                            <h2 class="font-headline text-3xl font-bold text-primary mb-4">Galileo Exploratorium</h2>
+                            <p class="text-on-surface-variant text-sm leading-relaxed mb-6">A hub for middle-grade students focusing on robotics, bio-studies, and environmental science with dedicated zero-G simulators.</p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="bg-surface border border-slate-200 p-3 rounded-2xl flex items-center gap-2 text-xs font-medium text-slate-600">
+                                    <span class="material-symbols-outlined text-secondary text-sm">rocket_launch</span> Robotics Lab
+                                </span>
+                                <span class="bg-surface border border-slate-200 p-3 rounded-2xl flex items-center gap-2 text-xs font-medium text-slate-600">
+                                    <span class="material-symbols-outlined text-secondary text-sm">psychology</span> STEAM+
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between pt-6 border-t border-surface-container">
+                            <div class="flex -space-x-3">
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaryDGu6UtN6T8zUMBjNqbrDhoIyKbLfwzaDSelkAFPiX7CwLq5uAAaZLB9EtRJwMnSPzlKDQA2upcZX8azsUszuYzuqD9-7Sk2M9gNtr1td8I0KJz9v9Q0q6dvLd8cTUIjupuCY0niSrWDhjyylQx1a440hhAKk4YbhnwCUzkNjWMCnvxUK97g3QdWLZ8erlGRa1_7_WB_Gx3H2_Iu8yZse9yXM81l337fr6gLAXnr6iFMew5qPfMHCR9iQsYHMIB1wLWroH-1jA'); background-size: cover;"></div>
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-300" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_YNCaK8QxlGzsy05XF6lHu3FQ7rIzSv-QSkCoATi0Gv4gd2j9yh6c-JGL8a5T48pDdyo3xLOctvWS-DcKD57kH3p0big2u6Lw6xfRBNzFVJP5hnseWrHc6Ai_a2UIGWX14uyq4xwPwGQq0AjA7q7N7ZyL-g4ezRJaBbl6KkbKpg1g5qaiwT-h2UwcHGcJHO0afuO-dheEbYvgsGleOwLcszuFqr0L71amYOFlWSejGS5SLm60mIPl5fFGxmaaLEpt6278Sm0E7K4'); background-size: cover;"></div>
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-400" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxNQ1_fcsDixVqwRGhq5PFG-GPPSLxlWWiMZqNh6HpKIiYBdLsP0aIDPEKo8NLLbldS7O30ZDQIyZtGQ6X0bMcNnQvAxIsDguwMYfuB4DN64KWdKaFIZtfNHSCAE8aCi-IQzh84aq84x243LBP6lqhl5HcEJuAEzqAwVk1envK6MkI0UIljUA_iu62Nul_LgsuzdCjOWX4ts8aCMa5b_MF9-5fKUX1PKeHqOsGTKZ9Urz0t3NNcRE8CrELdPPIPyx6eV0Tgog3xCw'); background-size: cover;"></div>
+                                <div class="w-8 h-8 rounded-full border-2 border-white bg-secondary flex items-center justify-center text-[10px] text-white font-bold">+12</div>
+                            </div>
+                            <button class="text-secondary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" onclick="alert('Exploring Hub')">Explore Hub <span class="material-symbols-outlined text-sm">open_in_new</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+</style>

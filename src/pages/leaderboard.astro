@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ClientLayout from '../layouts/ClientLayout';
+import LeaderboardPage from '../components/pages/LeaderboardPage';
+---
+
+<Layout title="Orbit | Global Leaderboard">
+  <ClientLayout client:load currentPath="/leaderboard">
+    <LeaderboardPage client:load />
+  </ClientLayout>
+</Layout>

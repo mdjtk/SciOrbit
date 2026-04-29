@@ -1,0 +1,289 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Achievement Hub | Science Orbit">
+    <div class="max-w-screen-2xl mx-auto px-8 py-12">
+        <!-- Hero & Filter Engine -->
+        <section class="mb-16">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div class="max-w-2xl">
+                    <span class="text-secondary font-headline font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Orbital Records</span>
+                    <h1 class="text-5xl lg:text-6xl font-headline font-bold text-primary leading-[1.1] -tracking-[0.03em] mb-6">
+                        Achieving <span class="text-secondary">Escape Velocity</span> in Excellence.
+                    </h1>
+                    <p class="text-on-surface-variant text-lg leading-relaxed">
+                        Celebrating the rigorous academic pursuit and stellar results of our Weightless Laboratory scholars across KEAM, NEET, and JEE.
+                    </p>
+                </div>
+                <button class="px-8 py-4 bg-primary text-white rounded-xl font-headline font-bold hover:opacity-90 transition-all flex items-center gap-2 shadow-lg shadow-primary/10">
+                    <span class="material-symbols-outlined text-lg">download</span>
+                    Export Full Report
+                </button>
+            </div>
+
+            <!-- Filter Engine SO-MOD-04 -->
+            <div class="bg-surface-container-low p-2 rounded-2xl flex flex-col md:flex-row items-center gap-2">
+                <div class="flex items-center bg-white px-4 py-2 rounded-xl border border-slate-100 flex-1 w-full">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-widest mr-4">Year</span>
+                    <select class="border-none bg-transparent font-headline font-bold text-primary focus:ring-0 p-0 text-sm cursor-pointer w-full">
+                        <option>2024 Academic Cycle</option>
+                        <option>2025 Academic Cycle</option>
+                    </select>
+                </div>
+                <div class="flex items-center bg-white px-4 py-2 rounded-xl border border-slate-100 flex-1 w-full">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-widest mr-4">Institution</span>
+                    <select class="border-none bg-transparent font-headline font-bold text-primary focus:ring-0 p-0 text-sm cursor-pointer w-full">
+                        <option>All Wings</option>
+                        <option>Senior Wing (Kochi)</option>
+                        <option>Junior Wing (Trivandrum)</option>
+                    </select>
+                </div>
+                <div class="flex items-center bg-white px-4 py-2 rounded-xl border border-slate-100 flex-1 w-full">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-widest mr-4">Category</span>
+                    <select class="border-none bg-transparent font-headline font-bold text-primary focus:ring-0 p-0 text-sm cursor-pointer w-full">
+                        <option>Entrance Toppers</option>
+                        <option>HSS Results</option>
+                        <option>Wall of Fame</option>
+                    </select>
+                </div>
+                <button class="px-6 py-3 bg-secondary text-white rounded-xl font-headline font-bold hover:bg-secondary/90 transition-all" onclick="alert('Filters applied for prototype.')">
+                    Apply Filters
+                </button>
+            </div>
+        </section>
+
+        <!-- Entrance Topper Spotlight -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-headline font-bold text-primary mb-8">Entrance Topper Spotlight</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- NEET Spotlight -->
+                <div class="weightless-card bg-surface-container-lowest border border-slate-100 p-8 rounded-2xl flex flex-col items-center text-center relative overflow-hidden group">
+                    <div class="absolute top-4 right-4 text-[10px] font-bold text-secondary tracking-widest uppercase bg-secondary/10 px-3 py-1 rounded-full">NEET 2024</div>
+                    <div class="w-32 h-32 rounded-full overflow-hidden mb-6 ring-8 ring-slate-50">
+                        <img alt="Adithya Varma" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFK8gVxuTBRDq9iyCGFF7kpdcNLGp0t_4OCsKej4suLQZY7C4dUIufTGdS0CtwFQ1e4TYxmdX6v8mfYpB8odbCTU_urEz3sS-b80rme5ZLyrnDUx1l-hi2lxPDlV0rKWRcOGafZ7mTI1CKGITs4EA3U1bRVbaZsebqKd1qhpbJOvliomDdoryoPIDzQ3G5VlIWjIa6Ne_haFbHyvM_o1OKGl103ogPZzxIgu4KcIqE271Nt8cOwvcMFzUU5AvHMb326HeOybm3-QM"/>
+                    </div>
+                    <h3 class="text-2xl font-headline font-bold text-primary mb-1">Adithya Varma</h3>
+                    <p class="text-secondary font-bold text-lg mb-4">Rank: AIR 12</p>
+                    <div class="w-full grid grid-cols-2 gap-2 pt-6 border-t border-slate-100">
+                        <div>
+                            <p class="text-[10px] uppercase text-slate-400 font-bold mb-1">Score</p>
+                            <p class="font-headline font-bold text-primary">715/720</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] uppercase text-slate-400 font-bold mb-1">Percentile</p>
+                            <p class="font-headline font-bold text-primary">99.99</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KEAM Spotlight -->
+                <div class="weightless-card bg-surface-container-lowest border border-slate-100 p-8 rounded-2xl flex flex-col items-center text-center relative overflow-hidden group">
+                    <div class="absolute top-4 right-4 text-[10px] font-bold text-secondary tracking-widest uppercase bg-secondary/10 px-3 py-1 rounded-full">KEAM 2024</div>
+                    <div class="w-32 h-32 rounded-full overflow-hidden mb-6 ring-8 ring-slate-50">
+                        <img alt="Meera Joseph" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq_7GiorUTlJiB9p-_JgyPOOI-VFLxd0A8LYWcvq9Ll7WqCOP1H49y3-2rAoXLfpXvfCF3Gf6bQso7gEzRAxo1YZCV7h6M6MDAMz6cQWvwXczmgguJKvwXHpulKbsuxKdueKiEA_rOaHjkDl3jtTmovvdrGmwNmTmaQS3ro96MbklsQiPVf19KtXxGu5Yhapt6y6cqns7gSHx6foDA3_8yrVPKrVy8YFSFMNLb_dRowiistoHQI-DEZqHI1E5m5qHVdLRiC02_J08"/>
+                    </div>
+                    <h3 class="text-2xl font-headline font-bold text-primary mb-1">Meera Joseph</h3>
+                    <p class="text-secondary font-bold text-lg mb-4">Rank: State 02</p>
+                    <div class="w-full grid grid-cols-2 gap-2 pt-6 border-t border-slate-100">
+                        <div>
+                            <p class="text-[10px] uppercase text-slate-400 font-bold mb-1">Score</p>
+                            <p class="font-headline font-bold text-primary">942/960</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] uppercase text-slate-400 font-bold mb-1">Maths</p>
+                            <p class="font-headline font-bold text-primary">480/480</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JEE Spotlight -->
+                <div class="weightless-card bg-surface-container-lowest border border-slate-100 p-8 rounded-2xl flex flex-col items-center text-center relative overflow-hidden group">
+                    <div class="absolute top-4 right-4 text-[10px] font-bold text-secondary tracking-widest uppercase bg-secondary/10 px-3 py-1 rounded-full">JEE ADV 2024</div>
+                    <div class="w-32 h-32 rounded-full overflow-hidden mb-6 ring-8 ring-slate-50">
+                        <img alt="Rohan Krishnan" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw03rdrKAf7glKHNDd8s3aoDMTLvCS79Q5OJ7leiiO1P9Sa5xBqYkqw-FefjUiQvM4ef_4RU7rL9rwBnSFvYXaNCNzbYCMmP-712WmCLdkQA315BAcKUGxF0Qi4c-QakK19eXgehm3trQpWD0hes0S2RpgT0xEMuqBR_QLLC1HSMowBPkhIBjtYUKmIYKWYtz2qZaiXwA8cbZg1cAoRMqEKAIQS5HtKhNE5DR4dAnx3Q5S01WceGIhk7k2Q_NNyH6ZsmA4lCBpVgI"/>
+                    </div>
+                    <h3 class="text-2xl font-headline font-bold text-primary mb-1">Rohan Krishnan</h3>
+                    <p class="text-secondary font-bold text-lg mb-4">Rank: AIR 245</p>
+                    <div class="w-full grid grid-cols-2 gap-2 pt-6 border-t border-slate-100">
+                        <div>
+                            <p class="text-[10px] uppercase text-slate-400 font-bold mb-1">Percentile</p>
+                            <p class="font-headline font-bold text-primary">99.982</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] uppercase text-slate-400 font-bold mb-1">Physics</p>
+                            <p class="font-headline font-bold text-primary">100/100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HSS Results Bento Grid -->
+        <section class="mb-20">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="text-3xl font-headline font-bold text-primary mb-2">HSS Board Analytics</h2>
+                    <p class="text-on-surface-variant">2024 Higher Secondary Examination metrics per institution.</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Summary Card -->
+                <div class="md:col-span-2 bg-primary p-8 rounded-2xl text-white relative overflow-hidden group hover:scale-[1.01] transition-transform">
+                    <div class="relative z-10">
+                        <p class="text-xs font-bold uppercase tracking-widest text-slate-300 mb-2">Overall Performance</p>
+                        <h3 class="text-5xl font-headline font-bold mb-6">98.4% <span class="text-secondary text-2xl font-normal">Pass Rate</span></h3>
+                        
+                        <div class="flex gap-4">
+                            <div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm">
+                                <p class="text-2xl font-headline font-bold">1,240</p>
+                                <p class="text-[10px] uppercase font-bold text-slate-300">Total Students</p>
+                            </div>
+                            <div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm">
+                                <p class="text-2xl font-headline font-bold">142</p>
+                                <p class="text-[10px] uppercase font-bold text-slate-300">Full A+ Holders</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="material-symbols-outlined absolute -right-8 -bottom-8 text-[200px] text-white/5 rotate-12">auto_awesome</span>
+                </div>
+
+                <!-- School 1 Stats -->
+                <div class="bg-surface-container-low p-6 rounded-2xl border border-slate-100 flex flex-col justify-between weightless-card">
+                    <div>
+                        <h4 class="font-headline font-bold text-primary mb-1">Kochi Main Campus</h4>
+                        <p class="text-xs text-slate-500 mb-6">Science Stream Only</p>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="font-medium text-on-surface">Pass Rate</span>
+                                    <span class="font-bold text-secondary">100%</span>
+                                </div>
+                                <div class="w-full bg-white h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-secondary h-full w-full"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="font-medium text-on-surface">Full A+ Count</span>
+                                    <span class="font-bold text-primary">82 Scholars</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="mt-6 text-xs font-bold text-secondary flex items-center gap-1 hover:gap-2 transition-all" onclick="alert('Breakdown modal coming soon...')">VIEW BREAKDOWN <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+                </div>
+
+                <!-- School 2 Stats -->
+                <div class="bg-surface-container-low p-6 rounded-2xl border border-slate-100 flex flex-col justify-between weightless-card">
+                    <div>
+                        <h4 class="font-headline font-bold text-primary mb-1">TVM City Campus</h4>
+                        <p class="text-xs text-slate-500 mb-6">Commerce &amp; Humanities</p>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="font-medium text-on-surface">Pass Rate</span>
+                                    <span class="font-bold text-secondary">96.8%</span>
+                                </div>
+                                <div class="w-full bg-white h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-secondary h-full w-[96.8%]"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="font-medium text-on-surface">Full A+ Count</span>
+                                    <span class="font-bold text-primary">60 Scholars</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="mt-6 text-xs font-bold text-secondary flex items-center gap-1 hover:gap-2 transition-all" onclick="alert('Breakdown modal coming soon...')">VIEW BREAKDOWN <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scholastic Registry -->
+        <section class="mb-20">
+            <div class="flex justify-between items-end mb-8">
+                <h2 class="text-3xl font-headline font-bold text-primary">Scholastic Registry</h2>
+                <div class="flex gap-2">
+                    <button class="p-2 border border-slate-200 rounded-lg hover:bg-slate-100 transition-all"><span class="material-symbols-outlined">chevron_left</span></button>
+                    <button class="p-2 border border-slate-200 rounded-lg hover:bg-slate-100 transition-all"><span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Registry Card 1 -->
+                <div class="weightless-card group cursor-pointer" onclick="alert('Navigating to student profile...')">
+                    <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500 relative bg-slate-100 border border-slate-100">
+                        <img alt="Kevin Paul" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaryDGu6UtN6T8zUMBjNqbrDhoIyKbLfwzaDSelkAFPiX7CwLq5uAAaZLB9EtRJwMnSPzlKDQA2upcZX8azsUszuYzuqD9-7Sk2M9gNtr1td8I0KJz9v9Q0q6dvLd8cTUIjupuCY0niSrWDhjyylQx1a440hhAKk4YbhnwCUzkNjWMCnvxUK97g3QdWLZ8erlGRa1_7_WB_Gx3H2_Iu8yZse9yXM81l337fr6gLAXnr6iFMew5qPfMHCR9iQsYHMIB1wLWroH-1jA"/>
+                        <div class="absolute top-2 left-2 flex flex-wrap gap-1">
+                            <span class="bg-primary/90 text-white text-[8px] font-bold uppercase px-2 py-0.5 rounded backdrop-blur">State Level</span>
+                        </div>
+                    </div>
+                    <h5 class="font-headline font-bold text-primary text-sm mb-1">Kevin Paul</h5>
+                    <p class="text-xs text-slate-500">KEAM Rank: 42</p>
+                </div>
+                <!-- Registry Card 2 -->
+                <div class="weightless-card group cursor-pointer" onclick="alert('Navigating to student profile...')">
+                    <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500 relative bg-slate-100 border border-slate-100">
+                        <img alt="Sara Salim" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_YNCaK8QxlGzsy05XF6lHu3FQ7rIzSv-QSkCoATi0Gv4gd2j9yh6c-JGL8a5T48pDdyo3xLOctvWS-DcKD57kH3p0big2u6Lw6xfRBNzFVJP5hnseWrHc6Ai_a2UIGWX14uyq4xwPwGQq0AjA7q7N7ZyL-g4ezRJaBbl6KkbKpg1g5qaiwT-h2UwcHGcJHO0afuO-dheEbYvgsGleOwLcszuFqr0L71amYOFlWSejGS5SLm60mIPl5fFGxmaaLEpt6278Sm0E7K4"/>
+                        <div class="absolute top-2 left-2 flex flex-wrap gap-1">
+                            <span class="bg-secondary/90 text-white text-[8px] font-bold uppercase px-2 py-0.5 rounded backdrop-blur">Innovation Award</span>
+                        </div>
+                    </div>
+                    <h5 class="font-headline font-bold text-primary text-sm mb-1">Sara Salim</h5>
+                    <p class="text-xs text-slate-500">NEET Score: 690</p>
+                </div>
+                <!-- Registry Card 3 -->
+                <div class="weightless-card group cursor-pointer" onclick="alert('Navigating to student profile...')">
+                    <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500 relative bg-slate-100 border border-slate-100">
+                        <img alt="Arjun Das" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxNQ1_fcsDixVqwRGhq5PFG-GPPSLxlWWiMZqNh6HpKIiYBdLsP0aIDPEKo8NLLbldS7O30ZDQIyZtGQ6X0bMcNnQvAxIsDguwMYfuB4DN64KWdKaFIZtfNHSCAE8aCi-IQzh84aq84x243LBP6lqhl5HcEJuAEzqAwVk1envK6MkI0UIljUA_iu62Nul_LgsuzdCjOWX4ts8aCMa5b_MF9-5fKUX1PKeHqOsGTKZ9Urz0t3NNcRE8CrELdPPIPyx6eV0Tgog3xCw"/>
+                        <div class="absolute top-2 left-2 flex flex-wrap gap-1">
+                            <span class="bg-primary/90 text-white text-[8px] font-bold uppercase px-2 py-0.5 rounded backdrop-blur">State Level</span>
+                        </div>
+                    </div>
+                    <h5 class="font-headline font-bold text-primary text-sm mb-1">Arjun Das</h5>
+                    <p class="text-xs text-slate-500">JEE Percentile: 99.2</p>
+                </div>
+                <!-- Registry Card 4 -->
+                <div class="weightless-card group cursor-pointer">
+                    <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500 relative bg-slate-100 border border-slate-100">
+                        <img alt="Ananya Nair" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbseGsLtzQjOULbtn-OSx0mdApvrdthWhnBudEbDdPC0lOSXEH2OB12oGNyIORUSrhszLsbFH0gFdI6GO26T0Ot84coqTlAhoGmJOJG7oCcD62fro6qNvam0owOTaAM3KW7JlzJoGbMhoFN8dZSWAAYIOj3-2frqxMpkKaBz-NKwYbSg31kGmDzA2GelGOjCCE_gdcvHJYnmfKN2iOINjMT1c4q1-6FudE73ERM9k7gFYW4HRbAi8Qpzbq-njvE2rcvptNcTP_v6E"/>
+                    </div>
+                    <h5 class="font-headline font-bold text-primary text-sm mb-1">Ananya Nair</h5>
+                    <p class="text-xs text-slate-500">Full A+ (Commerce)</p>
+                </div>
+                <!-- Registry Card 5 -->
+                <div class="weightless-card group cursor-pointer">
+                    <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500 relative bg-slate-100 border border-slate-100">
+                        <img alt="Sidarth S." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbndwDcIvVZfu6KqUXYhsgjtKFqOIhuUw4_cvXlxwhInms7EoVMCOAxlacbyiuWNIX063cTpFqeA3-jK_8Os_R8NOkts-MhQGBDFuh58M9qdWswaZPAOBYtFEbm3daqXwMywpsjV7haERmo6jHFZ2m3TAVUHbkBTqNANkKWjbgGupgUu7om7DII9diS8vO2NmnvpY313ZHXCULPJLuLRiKMLr41K_QHbfec2jWhNUDP1Elx4lpYknNew4oYA4EqREg5vSZZVH2VoQ"/>
+                        <div class="absolute top-2 left-2 flex flex-wrap gap-1">
+                            <span class="bg-tertiary/90 text-white text-[8px] font-bold uppercase px-2 py-0.5 rounded backdrop-blur">Scholastic Medal</span>
+                        </div>
+                    </div>
+                    <h5 class="font-headline font-bold text-primary text-sm mb-1">Sidarth S.</h5>
+                    <p class="text-xs text-slate-500">KEAM Rank: 104</p>
+                </div>
+                <!-- Registry Card 6 -->
+                <div class="weightless-card group cursor-pointer">
+                    <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500 relative bg-slate-100 border border-slate-100">
+                        <img alt="Leila Mary" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBATlue9weN76MFoZ9DNMFkaD-cXHIWezB30My64zgMVxnh2EOTkiazbCIQJ4NFznNp3sgjHQFBC-7itpQlzglOp0zQHYvo5-RSekhwZAG9YxJsP80FDNLw_PHfRfnqneogrO-g8t37eg3OK8XiHRJNxPFSv9fCz8WIe7yEpl7-9WAStZiZYXC1Og3GM9kzEURB8K67PGU-HkmR2P4SEQMMMEbFx2AQmIX0Inclw6TInS40HC04cX5GFwkmfPebjVhhBlgwiTJxOEI"/>
+                    </div>
+                    <h5 class="font-headline font-bold text-primary text-sm mb-1">Leila Mary</h5>
+                    <p class="text-xs text-slate-500">NEET Score: 685</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</Layout>
+
+<style>
+    .weightless-card {
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+    .weightless-card:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+</style>

@@ -1,0 +1,72 @@
+---
+const pathname = Astro.url.pathname;
+
+const links = [
+    { href: '/', icon: 'rocket_launch', label: 'Home' },
+    { href: '/achievements', icon: 'military_tech', label: 'Achievements' },
+    { href: '/directory', icon: 'domain', label: 'Directory' },
+    { href: '/login', icon: 'badge', label: 'Profile' },
+    { href: '/search', icon: 'search', label: 'Global Search' },
+];
+---
+
+<aside class="hidden md:flex flex-col h-screen w-20 hover:w-64 transition-all duration-300 overflow-hidden fixed left-0 border-r-0 bg-slate-50 dark:bg-slate-950 font-['Space_Grotesk'] font-medium py-8 z-50 group hover:shadow-[10px_0_30px_rgba(0,0,0,0.05)] border-r border-slate-200/50">
+    <!-- Header/Logo -->
+    <a href="/" class="flex items-center mb-12 overflow-hidden shrink-0 pl-5 h-12 w-full">
+        <!-- Always-visible icon -->
+        <img
+            src="/images/logo.png"
+            alt="Science Orbit"
+            class="w-9 h-9 object-contain shrink-0 rounded-full"
+        />
+        <!-- Text revealed on hover -->
+        <div class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+            <p class="text-[13px] font-black tracking-tight text-cyan-900 dark:text-white leading-tight">Science Orbit</p>
+            <p class="text-[9px] uppercase tracking-[0.18em] text-slate-400 font-bold">Jamia Madeenathunnoor</p>
+        </div>
+    </a>
+
+
+    <!-- Main Navigation -->
+    <nav class="flex-1 space-y-2 w-full flex flex-col">
+        {links.map(link => {
+            const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
+            return (
+                <a 
+                    class={`flex items-center gap-4 py-3.5 whitespace-nowrap transition-colors duration-200 ${
+                        isActive 
+                        ? 'bg-white dark:bg-slate-900 text-cyan-700 rounded-l-full ml-3 pl-[17px] shadow-sm relative after:absolute after:right-0 after:top-0 after:h-full after:w-1 after:bg-cyan-600' 
+                        : 'text-slate-400 dark:text-slate-600 hover:text-cyan-600 pl-[29px]'
+                    }`} 
+                    href={link.href}
+                >
+                    <span class={`material-symbols-outlined shrink-0 ${isActive ? 'fill-icon text-cyan-600' : ''} text-xl`} data-icon={link.icon}>{link.icon}</span>
+                    <span class={`text-sm tracking-wide font-bold transition-opacity duration-300 ${isActive ? 'opacity-100 md:opacity-0 md:group-hover:opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
+                        {link.label}
+                    </span>
+                </a>
+            )
+        })}
+    </nav>
+
+    <!-- Bottom Actions -->
+    <div class="mt-auto overflow-hidden transition-all flex flex-col w-full">
+        <div class="px-4 mb-8 flex justify-center group-hover:px-6 transition-all duration-300 relative w-full group/btn cursor-pointer" onclick="window.location.href='/login'">
+            <div class="w-12 h-12 group-hover:w-full group-hover:rounded-xl rounded-full bg-gradient-to-br from-primary to-primary-container text-white font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center shrink-0 relative overflow-hidden group-hover/btn:scale-[1.02] active:scale-95">
+                <span class="material-symbols-outlined group-hover:absolute group-hover:left-[18px] transition-all duration-300" data-icon="add">add</span>
+                <span class="opacity-0 group-hover:opacity-100 absolute left-12 whitespace-nowrap transition-opacity duration-300 font-bold tracking-wide">New Research</span>
+            </div>
+        </div>
+        
+        <div class="space-y-2 w-full pb-2">
+            <a class="flex items-center gap-4 py-3 pl-[29px] text-slate-400 hover:text-cyan-600 transition-colors cursor-pointer" href="#">
+                <span class="material-symbols-outlined text-xl shrink-0" data-icon="settings">settings</span>
+                <span class="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap font-bold tracking-widest uppercase">Settings</span>
+            </a>
+            <a class="flex items-center gap-4 py-3 pl-[29px] text-slate-400 hover:text-cyan-600 transition-colors cursor-pointer" href="#">
+                <span class="material-symbols-outlined text-xl shrink-0" data-icon="help">help</span>
+                <span class="text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap font-bold tracking-widest uppercase">Support</span>
+            </a>
+        </div>
+    </div>
+</aside>

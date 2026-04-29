@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ClientLayout from '../layouts/ClientLayout';
+import NotificationsPage from '../components/pages/NotificationsPage';
+---
+
+<Layout title="Orbit | Notifications">
+  <ClientLayout client:load currentPath="/notifications">
+    <NotificationsPage client:load />
+  </ClientLayout>
+</Layout>

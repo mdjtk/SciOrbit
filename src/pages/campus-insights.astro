@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ClientLayout from '../layouts/ClientLayout';
+import CampusInsightsPage from '../components/pages/CampusInsightsPage';
+---
+
+<Layout title="Orbit | Campus Insights">
+  <ClientLayout client:load currentPath="/campus-insights">
+    <CampusInsightsPage client:load />
+  </ClientLayout>
+</Layout>

@@ -1,0 +1,43 @@
+---
+import '../styles/globals.css';
+import SideNavBar from '../components/SideNavBar.astro';
+import TopAppBar from '../components/TopAppBar.astro';
+import BottomNavBar from '../components/BottomNavBar.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Science Orbit | Weightless Laboratory",
+  description = "Science Orbit Digital Hub"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+    
+    <SideNavBar />
+    
+    <main class="md:ml-20 min-h-screen pb-24 md:pb-12 transition-all duration-300">
+      <TopAppBar />
+      <slot />
+    </main>
+    
+    <BottomNavBar />
+
+    <button class="fixed bottom-24 right-8 w-14 h-14 bg-gradient-to-br from-secondary to-primary text-white rounded-full flex items-center justify-center shadow-xl md:bottom-12 hover:scale-110 active:scale-95 transition-all z-30">
+      <span class="material-symbols-outlined text-2xl" data-icon="add">add</span>
+    </button>
+  </body>
+</html>

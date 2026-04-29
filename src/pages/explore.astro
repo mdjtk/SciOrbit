@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ClientLayout from '../layouts/ClientLayout';
+import ExplorePage from '../components/pages/ExplorePage';
+---
+
+<Layout title="Orbit | Explore">
+  <ClientLayout client:load currentPath="/explore">
+    <ExplorePage client:load />
+  </ClientLayout>
+</Layout>

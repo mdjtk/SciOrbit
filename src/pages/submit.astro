@@ -1,0 +1,191 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="New Research Submission | Science Orbit">
+    <div class="max-w-[1440px] px-6 md:px-12 py-10 mx-auto">
+        <!-- Submission Header -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+            <div>
+                <nav class="flex items-center gap-2 text-outline text-[10px] md:text-xs mb-4 uppercase tracking-[0.2em] font-bold">
+                    <span>Research Portal</span>
+                    <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+                    <span class="text-secondary">Submission Draft</span>
+                </nav>
+                <h1 class="font-headline text-4xl md:text-5xl font-bold text-primary tracking-tight leading-tight mb-2">Draft: New Research Snippet</h1>
+                <p class="text-on-surface-variant font-medium text-sm flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">published_with_changes</span>
+                    Last autosaved: 2 minutes ago by Dr. Vance
+                </p>
+            </div>
+            <div class="flex gap-4 w-full md:w-auto">
+                <button class="flex-1 md:flex-none px-6 py-3 rounded-lg text-primary font-bold text-sm hover:bg-surface-container-high transition-all border border-primary/10 shadow-sm bg-white">
+                    Save Draft
+                </button>
+                <button class="flex-1 md:flex-none px-8 py-3 rounded-lg bg-gradient-to-br from-primary to-primary-container text-white font-bold text-sm shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-95 transition-all">
+                    Publish Research
+                </button>
+            </div>
+        </div>
+
+        <!-- High-Performance Editor Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Editor Core (Bento Component) -->
+            <div class="col-span-1 lg:col-span-8 space-y-8">
+                <!-- Main Text Area -->
+                <div class="bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-[0_20px_40px_rgba(0,51,69,0.04)] border border-slate-100">
+                    <div class="flex flex-wrap gap-2 mb-6 pb-4 border-b border-slate-100">
+                        <button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-lg text-on-surface-variant transition-colors" title="Bold">format_bold</button>
+                        <button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-lg text-on-surface-variant transition-colors" title="Italic">format_italic</button>
+                        <button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-lg text-on-surface-variant transition-colors" title="Bullet List">format_list_bulleted</button>
+                        <button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-lg text-on-surface-variant transition-colors" title="Function">functions</button>
+                        <div class="w-px h-6 bg-slate-200 self-center mx-2 hidden md:block"></div>
+                        <button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-lg text-on-surface-variant transition-colors" title="Link">link</button>
+                        <button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-lg text-on-surface-variant transition-colors" title="Quote">quote</button>
+                        <div class="flex-1"></div>
+                        <button class="text-xs font-bold text-secondary flex items-center gap-1 hover:bg-secondary/10 px-3 py-1.5 rounded-lg transition-colors">
+                            <span class="material-symbols-outlined text-[16px]">help</span> Guide
+                        </button>
+                    </div>
+                    <textarea class="w-full min-h-[300px] md:min-h-[400px] border-none focus:ring-0 text-lg leading-relaxed text-slate-700 placeholder:text-slate-400 bg-transparent resize-y font-body outline-none" placeholder="Begin typing your research abstract or findings here..."></textarea>
+                </div>
+
+                <!-- Media Upload Zone -->
+                <div class="group relative bg-surface-container-low rounded-2xl border-2 border-dashed border-outline-variant/40 p-10 md:p-12 text-center hover:border-secondary hover:bg-secondary/5 transition-all cursor-pointer">
+                    <input class="absolute inset-0 w-full height-full opacity-0 cursor-pointer z-10" type="file" title="Upload files">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-6 group-hover:scale-110 group-hover:bg-secondary transition-all">
+                            <span class="material-symbols-outlined text-secondary group-hover:text-white text-3xl transition-colors">cloud_upload</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-primary mb-2">Upload Laboratory Visuals</h3>
+                        <p class="text-on-surface-variant text-sm max-w-xs mx-auto mb-4">Drag and drop high-resolution diagrams, schematics, or thermal imaging data.</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-outline bg-white px-3 py-1 rounded-md border border-slate-200">Supported: TIFF, PNG, SVG (Max 100MB)</p>
+                    </div>
+                </div>
+
+                <!-- Live Preview Section -->
+                <div class="space-y-6 pt-4">
+                    <h2 class="font-headline text-2xl font-bold text-primary flex items-center gap-3">
+                        <span class="material-symbols-outlined text-secondary text-2xl">visibility</span>
+                        Live Ecosystem Preview
+                    </h2>
+                    <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-slate-100 ring-1 ring-black/5 hover:shadow-md transition-shadow">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="w-full md:w-48 h-48 md:h-32 rounded-xl bg-slate-100 overflow-hidden shrink-0">
+                                <img alt="Preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7QDXeos2n0_TA_dZQK6Iar3BwkbLXcoVUGkaO-x2BOswTZgaQ5CGkVkInf7bbeP2RQhF6syJTpC4NKBCZVwin4r-iDYV_NglkcpAkC_WeN_dbPNHsipgs-MpY8O4emniS6yo0ld09iBbMCj4DC9JM0GRBnjtsGwWAqthGU6oPLZeyCdoUg0RFPC-7LxHZFITIQ9FK8d_wbv1hMo-QHcqM4mTE3Z-N4HlOaow9CNHBa_ikvFWRxBYF5mOEhne49AeK-eEMh1VcgS4">
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-start gap-2 mb-3">
+                                    <span class="px-2.5 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest rounded shadow-sm">ASTROPHYSICS</span>
+                                    <span class="text-outline text-[10px] font-bold bg-surface px-2.5 py-1 rounded tracking-widest uppercase border border-slate-200">PREVIEW</span>
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold font-headline text-primary mb-3 leading-tight">Spectral Anomalies in Sector Alpha-7: Preliminary Findings</h3>
+                                <p class="text-sm text-on-surface-variant line-clamp-2 md:line-clamp-3 leading-relaxed">Observations of the recent pulsar burst suggest a non-linear decay rate that contradicts established gravitational models in local vacuum clusters...</p>
+                                <div class="flex items-center gap-2 mt-4 text-xs font-bold text-secondary uppercase tracking-widest hover:gap-3 transition-all cursor-pointer">
+                                    <span>READ FULL SNIPPET</span>
+                                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metadata Sidebar -->
+            <div class="col-span-1 lg:col-span-4 space-y-8">
+                <!-- Digital ID / Researcher Status -->
+                <div class="bg-white/80 backdrop-blur-md rounded-2xl p-8 border border-slate-100 border-l-4 border-l-secondary relative overflow-hidden shadow-sm">
+                    <div class="absolute -top-4 -right-4 w-32 h-32 opacity-5 pointer-events-none text-secondary">
+                        <span class="material-symbols-outlined text-[120px]">verified_user</span>
+                    </div>
+                    <div class="flex items-center gap-4 mb-6 relative z-10">
+                        <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-sm bg-slate-100">
+                            <img alt="Author" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPTx71667DEz2MogaWbi_MTN-2FAknRd5Nu_VnfpJV5KGwcAxmSUN_SdJ9UI6qoHrYBExWtDllgpMv4yjGCzEl6tdmVzKnX6fGBrzoxkr3aLYd9i-exsz16k3qy_g42PPbBi_mzEQwzP7YVuwB7vM0z_ALbx0KRZiuNAlxCgn7l6vJ9s1KcqDKB7bqXhM47bzyM39MwLBplyWQnkvESEK-PihhHYJzrraNWp1es62pw2_bjeu-4PcWXVrlletQBYpBqjvhs8vQO4c">
+                        </div>
+                        <div>
+                            <h4 class="font-headline font-bold text-lg text-primary">Dr. Alistair Vance</h4>
+                            <p class="text-[10px] text-secondary font-bold tracking-widest uppercase mt-0.5">Lead Astrophysics</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 relative z-10">
+                        <div class="bg-surface p-3 rounded-xl border border-slate-100">
+                            <p class="text-[9px] font-bold uppercase tracking-widest text-outline mb-1">UID STATUS</p>
+                            <p class="text-xs font-bold text-primary truncate" title="ORBIT-7729-ALPHA">ORBIT-7729-ALPHA</p>
+                        </div>
+                        <div class="bg-surface p-3 rounded-xl border border-slate-100">
+                            <p class="text-[9px] font-bold uppercase tracking-widest text-outline mb-1">CLEARANCE</p>
+                            <p class="text-xs font-bold text-tertiary">LEVEL 05 [ELITE]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category & Tags -->
+                <div class="bg-surface-container-low rounded-2xl p-6 md:p-8 space-y-6 border border-surface-container-highest shadow-inner">
+                    <h3 class="font-headline text-xl font-bold text-primary tracking-tight">Submission Metadata</h3>
+                    
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest block pl-1">Research Category</label>
+                        <div class="relative">
+                            <select class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3.5 text-sm font-bold focus:ring-2 focus:ring-secondary/20 appearance-none shadow-sm cursor-pointer outline-none">
+                                <option>Astrophysics</option>
+                                <option>Bio-engineering</option>
+                                <option>Quantum Computing</option>
+                                <option>Molecular Biology</option>
+                                <option>Materials Science</option>
+                            </select>
+                            <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest block pl-1">Keywords / Tags</label>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 shadow-sm rounded-lg text-xs font-bold flex items-center gap-2 group cursor-pointer hover:border-error hover:text-error transition-colors">
+                                Pulsar
+                                <span class="material-symbols-outlined text-[14px] text-slate-400 group-hover:text-error transition-colors">close</span>
+                            </span>
+                            <span class="px-3 py-1.5 bg-white border border-slate-200 shadow-sm rounded-lg text-xs font-bold flex items-center gap-2 group cursor-pointer hover:border-error hover:text-error transition-colors">
+                                Sector-7
+                                <span class="material-symbols-outlined text-[14px] text-slate-400 group-hover:text-error transition-colors">close</span>
+                            </span>
+                        </div>
+                        <input class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3.5 text-sm shadow-sm focus:ring-2 focus:ring-secondary/20 outline-none" placeholder="Type tag and press Enter..." type="text">
+                    </div>
+                    
+                    <div class="pt-6 border-t border-slate-200">
+                        <div class="flex items-start justify-between bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="pr-4">
+                                <h4 class="text-sm font-bold text-primary mb-1">Urgent Dispatch</h4>
+                                <p class="text-[10px] text-on-surface-variant leading-relaxed font-medium">Bypass standard peer-queue for immediate sync to portal.</p>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+                                <input class="sr-only peer" type="checkbox">
+                                <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary shadow-inner"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submission Checklist -->
+                <div class="bg-surface-container-lowest rounded-2xl p-6 border border-slate-100 shadow-sm">
+                    <h3 class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest px-2 mb-4">Integrity Checklist</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 bg-secondary/5 p-3 rounded-xl border border-secondary/10">
+                            <span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-xs font-bold text-primary">Metadata validated</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-secondary/5 p-3 rounded-xl border border-secondary/10">
+                            <span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="text-xs font-bold text-primary">No sensitive identifiers</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-surface p-3 rounded-xl border border-slate-100 text-slate-400">
+                            <span class="material-symbols-outlined text-lg">radio_button_unchecked</span>
+                            <span class="text-xs font-bold">Add Cross-references</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>

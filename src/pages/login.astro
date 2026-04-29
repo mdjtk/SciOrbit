@@ -1,0 +1,385 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sign In | Science Orbit">
+    <!-- Full-screen overlay, sits on top of the layout's normal content -->
+    <div class="fixed inset-0 z-[200] flex overflow-hidden" id="login-root">
+
+        <!-- ─── Left Panel (Brand / Decorative) ─── -->
+        <div class="hidden lg:flex flex-col justify-between w-[45%] p-14 relative overflow-hidden bg-gradient-to-br from-[#003345] to-[#006972]">
+            <!-- Background blobs -->
+            <div class="absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full bg-white/5 pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-[400px] h-[400px] rounded-full bg-white/5 pointer-events-none"></div>
+            <!-- Grid pattern overlay -->
+            <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(to right, #fff 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+            <!-- Logo -->
+            <a href="" class="flex items-center gap-4 relative z-10">
+                <img src="/images/logo.png" alt="Logo" class="w-10 h-10 object-contain" />
+                <div class="flex flex-col">
+                    <span class="font-black text-white text-2xl tracking-tight font-['Space_Grotesk'] leading-none">Science Orbit</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-white/50 font-bold mt-1">Jamia Madeenathunnoor</span>
+                </div>
+            </a>
+
+            <!-- Center content -->
+            <div class="relative z-10 flex flex-col items-center gap-10">
+                <!-- Animated orbit diagram -->
+                <div class="relative w-64 h-64">
+                    <!-- Orbit rings -->
+                    <div class="absolute inset-0 rounded-full border border-white/15 animate-[spin_40s_linear_infinite]"></div>
+                    <div class="absolute inset-8 rounded-full border border-white/10 animate-[spin_25s_linear_infinite_reverse]"></div>
+                    <div class="absolute inset-16 rounded-full border border-white/10 animate-[spin_16s_linear_infinite]"></div>
+                    <!-- Orbiting dots -->
+                    <div class="absolute top-1/2 left-0 w-3.5 h-3.5 -mt-[7px] rounded-full bg-gradient-to-br from-cyan-300 to-teal-400 shadow-[0_0_12px_rgba(34,211,238,0.7)] orbit-dot-1"></div>
+                    <div class="absolute top-1/2 right-16 w-2.5 h-2.5 -mt-[5px] rounded-full bg-gradient-to-br from-amber-300 to-orange-400 shadow-[0_0_10px_rgba(251,191,36,0.6)] orbit-dot-2"></div>
+                    <!-- Center core -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-20 h-20 rounded-full backdrop-blur-sm flex items-center justify-center shadow-xl border border-white/30 animate-pulse overflow-hidden p-4">
+                            <img src="/images/logo.png" alt="Core" class="w-full rounded-full h-full object-contain brightness-0 invert" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <h2 class="text-white text-3xl font-black leading-tight font-['Space_Grotesk'] mb-3">
+                        Where Science<br>Comes Alive
+                    </h2>
+                    <p class="text-white/60 max-w-xs mx-auto text-sm leading-relaxed">
+                        Join 240,000+ researchers, students, and institutions sharing discoveries that shape our world.
+                    </p>
+                </div>
+
+                <!-- Stats -->
+                <div class="flex gap-10 text-center">
+                    <div>
+                        <p class="text-white font-black text-xl font-['Space_Grotesk']">1,240+</p>
+                        <p class="text-white/50 text-xs font-bold uppercase tracking-widest">Campuses</p>
+                    </div>
+                    <div>
+                        <p class="text-white font-black text-xl font-['Space_Grotesk']">240K</p>
+                        <p class="text-white/50 text-xs font-bold uppercase tracking-widest">Scientists</p>
+                    </div>
+                    <div>
+                        <p class="text-white font-black text-xl font-['Space_Grotesk']">182K</p>
+                        <p class="text-white/50 text-xs font-bold uppercase tracking-widest">Papers</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-white/30 text-xs text-center relative z-10 font-medium">
+                Trusted by leading research institutions · SSL secured
+            </p>
+        </div>
+
+        <!-- ─── Right Panel (Form) ─── -->
+        <div class="flex-1 flex items-center justify-center p-6 lg:p-12 bg-white dark:bg-slate-950 overflow-y-auto relative">
+            <!-- Back to feed -->
+            <a href="/" class="absolute top-6 left-6 lg:top-8 lg:left-8 flex items-center gap-2 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors text-sm font-semibold group">
+                <span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                Continue as Guest
+            </a>
+
+            <!-- Mobile logo -->
+            <a href="" class="absolute top-6 right-6 flex lg:hidden items-center gap-2 group/logo">
+                <img src="/images/logo.png" alt="Science Orbit" class="w-8 h-8 object-contain" />
+                <div class="flex flex-col leading-[0.9]">
+                    <span class="font-black text-[#003345] dark:text-white text-[12px] tracking-tight font-['Space_Grotesk']">Science Orbit</span>
+                    <span class="text-[7px] uppercase tracking-[0.1em] text-slate-400 font-bold">Jamia Madeenathunnoor</span>
+                </div>
+            </a>
+
+            <div class="w-full max-w-md">
+
+                <!-- === STEP 1: Role Selection === -->
+                <div id="step-select" class="flex flex-col gap-8">
+                    <div>
+                        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#006972] dark:text-cyan-400">Welcome Back</span>
+                        <h1 class="text-3xl font-black text-[#003345] dark:text-white mt-1 mb-2 font-['Space_Grotesk'] leading-tight">Sign in to your<br>Orbit</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm">Select how you'd like to continue.</p>
+                    </div>
+
+                    <!-- Role Cards -->
+                    <div class="flex flex-col gap-3">
+                        <button class="role-card group flex items-center gap-4 p-5 rounded-2xl border border-[#003345]/10 bg-gradient-to-r from-[#003345]/5 to-transparent hover:border-[#003345]/30 hover:shadow-lg hover:translate-x-1.5 text-left transition-all duration-200" data-role="user" data-color="from-[#003345] via-[#006972] to-[#003345]">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#003345] to-[#006972] flex items-center justify-center shadow-lg shrink-0">
+                                <span class="material-symbols-outlined text-white">person</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-0.5">
+                                    <p class="font-bold text-[#003345] dark:text-white text-sm">Login as User</p>
+                                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border border-[#003345]/20 text-[#003345] bg-white/50 dark:bg-slate-900/50 dark:text-cyan-300 dark:border-cyan-700">Science Explorer</span>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Join the scientific community. Explore, follow, and share discoveries.</p>
+                            </div>
+                            <span class="material-symbols-outlined text-[#003345]/40 dark:text-white/30 group-hover:text-[#006972] group-hover:translate-x-1 transition-all">chevron_right</span>
+                        </button>
+
+                        <button class="role-card group flex items-center gap-4 p-5 rounded-2xl border border-emerald-500/20 bg-gradient-to-r from-emerald-500/5 to-transparent hover:border-emerald-500/40 hover:shadow-lg hover:translate-x-1.5 text-left transition-all duration-200" data-role="student" data-color="from-emerald-600 via-teal-500 to-emerald-600">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-500 flex items-center justify-center shadow-lg shrink-0">
+                                <span class="material-symbols-outlined text-white">school</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-0.5">
+                                    <p class="font-bold text-emerald-700 dark:text-emerald-300 text-sm">Login as Student</p>
+                                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-500/30 text-emerald-700 bg-white/50 dark:bg-slate-900/50 dark:text-emerald-300 dark:border-emerald-700">Campus Member</span>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Access your campus feed, peer research, and academic orbit network.</p>
+                            </div>
+                            <span class="material-symbols-outlined text-emerald-400/50 group-hover:text-emerald-500 group-hover:translate-x-1 transition-all">chevron_right</span>
+                        </button>
+
+                        <button class="role-card group flex items-center gap-4 p-5 rounded-2xl border border-amber-500/20 bg-gradient-to-r from-amber-500/5 to-transparent hover:border-amber-500/40 hover:shadow-lg hover:translate-x-1.5 text-left transition-all duration-200" data-role="campus" data-color="from-amber-500 via-orange-400 to-amber-500">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-400 flex items-center justify-center shadow-lg shrink-0">
+                                <span class="material-symbols-outlined text-white">business</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-0.5">
+                                    <p class="font-bold text-amber-700 dark:text-amber-300 text-sm">Login as Campus Admin</p>
+                                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border border-amber-500/30 text-amber-700 bg-white/50 dark:bg-slate-900/50 dark:text-amber-300 dark:border-amber-700">Admin Portal</span>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Manage your institution's presence, students, and publications.</p>
+                            </div>
+                            <span class="material-symbols-outlined text-amber-400/50 group-hover:text-amber-500 group-hover:translate-x-1 transition-all">chevron_right</span>
+                        </button>
+
+
+                    </div>
+
+                    <p class="text-center text-sm text-slate-500 dark:text-slate-400">
+                        New to Science Orbit?
+                        <a href="#" class="font-bold text-[#003345] dark:text-cyan-300 hover:underline ml-1">Create an account</a>
+                    </p>
+                </div>
+
+                <!-- === STEP 2: Login Form (hidden initially) === -->
+                <div id="step-form" class="hidden flex-col gap-7">
+                    <!-- Back -->
+                    <button id="back-btn" class="flex items-center gap-1.5 text-sm text-slate-400 hover:text-[#003345] dark:hover:text-white transition-colors w-fit group">
+                        <span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                        Choose a different role
+                    </button>
+
+                    <!-- Role badge -->
+                    <div>
+                        <div id="form-role-icon" class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#003345] to-[#006972] flex items-center justify-center shadow-xl mb-4">
+                            <span class="material-symbols-outlined text-white text-2xl" id="form-role-icon-name">person</span>
+                        </div>
+                        <span id="form-role-badge" class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#006972] dark:text-cyan-400">Science Explorer</span>
+                        <h2 id="form-role-title" class="text-3xl font-black text-[#003345] dark:text-white mt-1 font-['Space_Grotesk']">Login as User</h2>
+                        <p id="form-role-desc" class="text-slate-500 dark:text-slate-400 text-sm mt-1">Join the scientific community.</p>
+                    </div>
+
+                    <!-- Form -->
+                    <form id="login-form" class="flex flex-col gap-4" novalidate>
+                        <!-- Error -->
+                        <div id="form-error" class="hidden p-3 bg-red-500/10 border border-red-500/20 text-red-600 dark:text-red-400 text-xs rounded-xl text-center"></div>
+
+                        <!-- Email -->
+                        <div class="flex flex-col gap-1.5">
+                            <label for="login-email" class="text-xs font-semibold text-slate-700 dark:text-slate-300">Email / Institution ID</label>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">alternate_email</span>
+                                <input id="login-email" type="email" placeholder="you@university.edu" required
+                                    class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-sm outline-none focus:border-[#006972] focus:ring-2 focus:ring-[#006972]/20 transition-all font-medium dark:text-white dark:placeholder-slate-600">
+                            </div>
+                        </div>
+
+                        <!-- Campus code (shown for student/campus) -->
+                        <div id="campus-code-field" class="hidden flex-col gap-1.5">
+                            <label for="login-campus-code" class="text-xs font-semibold text-slate-700 dark:text-slate-300">Campus / Institution Code</label>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">business</span>
+                                <input id="login-campus-code" type="text" placeholder="e.g. MIT-2025"
+                                    class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-sm outline-none focus:border-[#006972] focus:ring-2 focus:ring-[#006972]/20 transition-all font-medium dark:text-white dark:placeholder-slate-600">
+                            </div>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="flex flex-col gap-1.5">
+                            <div class="flex justify-between items-center">
+                                <label for="login-password" class="text-xs font-semibold text-slate-700 dark:text-slate-300">Password</label>
+                                <a href="#" class="text-xs font-bold text-[#006972] dark:text-cyan-400 hover:underline">Forgot password?</a>
+                            </div>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">lock</span>
+                                <input id="login-password" type="password" placeholder="Enter your password" required
+                                    class="w-full pl-12 pr-12 py-3.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-sm outline-none focus:border-[#006972] focus:ring-2 focus:ring-[#006972]/20 transition-all font-medium dark:text-white dark:placeholder-slate-600">
+                                <button type="button" id="toggle-pass" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                                    <span class="material-symbols-outlined text-xl" id="pass-eye-icon">visibility</span>
+                                </button>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Submit -->
+                        <button type="submit" id="login-submit"
+                            class="w-full py-4 mt-1 rounded-xl font-black text-white text-sm tracking-wide shadow-lg active:scale-[0.98] transition-all relative overflow-hidden bg-gradient-to-r from-[#003345] to-[#006972] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#003345]/20">
+                            <span id="submit-text" class="relative flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined text-[18px]" id="submit-icon">person</span>
+                                Continue as User
+                            </span>
+                            <!-- shimmer -->
+                            <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-700 pointer-events-none"></span>
+                        </button>
+                    </form>
+
+                    <p class="text-center text-sm text-slate-500 dark:text-slate-400">
+                        Don't have an account?
+                        <a href="#" class="font-bold text-[#003345] dark:text-cyan-300 hover:underline ml-1">Sign up free</a>
+                    </p>
+                    <p class="text-center text-[11px] text-slate-400 flex items-center justify-center gap-1">
+                        <span class="material-symbols-outlined text-sm">shield</span>
+                        Secured with 256-bit SSL encryption
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    /* Orbit animation dots */
+    .orbit-dot-1 {
+        transform-origin: 128px 0;
+        animation: spin 12s linear infinite;
+    }
+    .orbit-dot-2 {
+        transform-origin: 80px 0;
+        animation: spin 8s linear infinite reverse;
+    }
+    @keyframes spin {
+        from { transform: rotate(0deg) translateX(0); }
+        to { transform: rotate(360deg) translateX(0); }
+    }
+
+    /* Step transitions */
+    #step-select, #step-form {
+        animation: fadeSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    @keyframes fadeSlideIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<script>
+    // Role data
+    const roleData: Record<string, { title: string; badge: string; description: string; icon: string; gradient: string; showCampus: boolean; showAdminHint: boolean }> = {
+        user: {
+            title: 'Login as User',
+            badge: 'Science Explorer',
+            description: 'Join the scientific community. Explore, follow, and share discoveries.',
+            icon: 'person',
+            gradient: 'from-[#003345] to-[#006972]',
+            showCampus: false,
+            showAdminHint: false,
+        },
+        student: {
+            title: 'Login as Student',
+            badge: 'Campus Member',
+            description: 'Access your campus feed, peer research, and academic orbit network.',
+            icon: 'school',
+            gradient: 'from-emerald-600 to-teal-500',
+            showCampus: true,
+            showAdminHint: false,
+        },
+        campus: {
+            title: 'Login as Campus Admin',
+            badge: 'Admin Portal',
+            description: "Manage your institution's presence, students, and publications.",
+            icon: 'business',
+            gradient: 'from-amber-500 to-orange-400',
+            showCampus: true,
+            showAdminHint: false,
+        },
+
+    };
+
+    const stepSelect = document.getElementById('step-select')!;
+    const stepForm = document.getElementById('step-form')!;
+
+    function showStep(step: 'select' | 'form') {
+        if (step === 'form') {
+            stepSelect.classList.add('hidden');
+            stepSelect.classList.remove('flex');
+            stepForm.classList.remove('hidden');
+            stepForm.classList.add('flex');
+        } else {
+            stepForm.classList.add('hidden');
+            stepForm.classList.remove('flex');
+            stepSelect.classList.remove('hidden');
+            stepSelect.classList.add('flex');
+        }
+    }
+
+    // Role card click
+    document.querySelectorAll<HTMLButtonElement>('.role-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const role = card.dataset.role!;
+            const data = roleData[role];
+            if (!data) return;
+
+            // Update form with role info
+            (document.getElementById('form-role-icon-name') as HTMLElement).textContent = data.icon;
+            (document.getElementById('form-role-badge') as HTMLElement).textContent = data.badge;
+            (document.getElementById('form-role-title') as HTMLElement).textContent = data.title;
+            (document.getElementById('form-role-desc') as HTMLElement).textContent = data.description;
+
+            // Update submit button
+            const submitText = document.getElementById('submit-text')!;
+            const submitIcon = document.getElementById('submit-icon')!;
+            submitIcon.textContent = data.icon;
+            submitText.querySelector('span:last-child')!.textContent = ' ' + data.title.replace('Login as ', 'Continue as ');
+
+            // Toggle campus code
+            const campusField = document.getElementById('campus-code-field')!;
+            if (data.showCampus) {
+                campusField.classList.remove('hidden');
+                campusField.classList.add('flex');
+            } else {
+                campusField.classList.add('hidden');
+                campusField.classList.remove('flex');
+            }
+
+
+
+            showStep('form');
+        });
+    });
+
+    // Back button
+    document.getElementById('back-btn')!.addEventListener('click', () => {
+        showStep('select');
+    });
+
+    // Password toggle
+    const togglePass = document.getElementById('toggle-pass')!;
+    const loginPassword = document.getElementById('login-password') as HTMLInputElement;
+    const eyeIcon = document.getElementById('pass-eye-icon')!;
+    togglePass.addEventListener('click', () => {
+        if (loginPassword.type === 'password') {
+            loginPassword.type = 'text';
+            eyeIcon.textContent = 'visibility_off';
+        } else {
+            loginPassword.type = 'password';
+            eyeIcon.textContent = 'visibility';
+        }
+    });
+
+    // Form submit — prototype: redirect to profile
+    document.getElementById('login-form')!.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('login-submit') as HTMLButtonElement;
+        const text = document.getElementById('submit-text')!;
+        btn.disabled = true;
+        text.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">autorenew</span> Signing in...';
+        // Simulate async
+        setTimeout(() => {
+            window.location.href = '/profile';
+        }, 1200);
+    });
+</script>

@@ -1,0 +1,209 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Student Profile | Science Orbit">
+    <div class="max-w-7xl mx-auto px-6 py-12 lg:px-12">
+        <!-- Dashboard Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <!-- Left Column: Digital ID & Performance (4/12) -->
+            <div class="lg:col-span-4 flex flex-col gap-8">
+                <!-- Digital ID Card -->
+                <div class="bg-surface-container-lowest/70 backdrop-blur-md rounded-xl overflow-hidden relative shadow-[0_20px_40px_rgba(0,51,69,0.06)] border border-white/20 group">
+                    <!-- Tertiary Accent Strip -->
+                    <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-tertiary"></div>
+                    
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-8">
+                            <div>
+                                <h3 class="text-xs font-label uppercase tracking-[0.15em] text-on-surface-variant font-bold mb-1">Student Identity</h3>
+                                <p class="text-xs font-label text-secondary font-medium uppercase tracking-wider">Weightless Laboratory</p>
+                            </div>
+                            <div class="bg-surface-container-high p-2 rounded-lg">
+                                <span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center text-center mb-8">
+                            <div class="relative mb-4">
+                                <img class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md" alt="Student Profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR2nWEVpBNS85L0GGYLqylrUm-bu1FxV55wXwdTcA0vTqH1xm4zyTKRh3kaSnR9W0f_ufbzrWHQX53M1VaqC8DYYAhw5N-12oenpLD0kwNidT4llvkDVW6-p6TgSruMv7S40rx4kH3O0SuD3bbswlHXM6OALwkFklFiAHPNZIf29SWNYFOU3ilTEo9r5_IMDONhxc4WAEhJCPiNW3rM6CezCGzruRWF0raOx2BBDWRpbL3K3VkfCIgJ31hC7v10bgZh8lxvYIuGQM"/>
+                                <div class="absolute -bottom-2 -right-2 bg-secondary text-white p-1.5 rounded-full shadow-lg">
+                                    <span class="material-symbols-outlined text-sm fill-icon font-['Material_Symbols_Outlined']" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                </div>
+                            </div>
+                            <h2 class="text-2xl font-headline font-bold text-primary tracking-tight" id="studentName">Dr. Julian Vance</h2>
+                            <p class="text-sm font-label text-on-surface-variant" id="studentTitle">Astrophysics Senior Research Fellow</p>
+                        </div>
+
+                        <div class="space-y-4 pt-6 border-t border-outline-variant/20">
+                            <div class="flex justify-between">
+                                <span class="text-[10px] uppercase font-bold tracking-widest text-outline">UID Number</span>
+                                <span class="text-xs font-mono font-bold text-primary">SO-2024-9982-X</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-[10px] uppercase font-bold tracking-widest text-outline">Lab Location</span>
+                                <span class="text-xs font-bold text-primary">STATION-DELTA / ORBIT-4</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 flex justify-center p-4 bg-white/50 rounded-lg">
+                            <img class="w-24 h-24 mix-blend-multiply opacity-80" alt="QR Code" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5Z0HHfpRG7L_2mmWxWmhFsuYKG6UhEbQsOGUhYqdIEZO39TNIzlAsnO2-cF4YAlPJULM3-2NTFT80-iRCGWb10t445jhs7S0eKDUq-S7kxXlC6xMoPhighg1EaTjDEe55Jh7OfEtqMl41iqa1S2Tgxtgxr9FoCtiyC4kw_AMBZmScmZPJeOg2hnXOxBAaD-okwvE5QR7Oa5Azd8bOiJnvoL57EyhXftgIx1yRbdIFtfZL3gGfmR9HOIdbUKnqZ9lPUe_SU6M2dJo"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Skills & Achievements (8/12) -->
+            <div class="lg:col-span-8 flex flex-col gap-10">
+                <!-- School Credentials Header -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div>
+                        <h1 class="text-4xl lg:text-5xl font-headline font-bold text-primary tracking-tighter leading-none mb-4">
+                            Research Academic <br/>Portfolio
+                        </h1>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-1.5 bg-secondary text-white text-[10px] font-bold uppercase tracking-widest rounded-full">Year 2024</span>
+                            <span class="px-4 py-1.5 bg-surface-container-highest text-primary text-[10px] font-bold uppercase tracking-widest rounded-full">High-Altitude Division</span>
+                            <span class="px-4 py-1.5 bg-surface-container-highest text-primary text-[10px] font-bold uppercase tracking-widest rounded-full" id="statusBadge">Active</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center border border-outline-variant/10">
+                                <span class="material-symbols-outlined text-secondary">workspace_premium</span>
+                            </div>
+                            <span class="text-[9px] font-bold uppercase mt-2 text-outline">verified</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center border border-outline-variant/10">
+                                <span class="material-symbols-outlined text-tertiary">military_tech</span>
+                            </div>
+                            <span class="text-[9px] font-bold uppercase mt-2 text-outline">committee</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Showcase (Bento Style) -->
+                <section>
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-sm font-headline font-bold text-on-surface-variant uppercase tracking-widest mt-1">Expertise Domains</h3>
+                        <button class="text-xs text-secondary font-bold hover:underline" onclick="toggleEditSkills()">Edit Skills</button>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="skillsContainer">
+                        <div class="p-6 bg-surface-container-low rounded-xl flex flex-col gap-4">
+                            <span class="material-symbols-outlined text-secondary text-3xl">science</span>
+                            <h5 class="font-headline font-bold text-primary">Laboratory Analysis</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white text-[10px] font-bold text-on-surface-variant rounded shadow-sm">Spectroscopy</span>
+                                <span class="px-2 py-1 bg-white text-[10px] font-bold text-on-surface-variant rounded shadow-sm">Centrifuge</span>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-primary text-white rounded-xl flex flex-col gap-4">
+                            <span class="material-symbols-outlined text-secondary-fixed text-3xl">data_exploration</span>
+                            <h5 class="font-headline font-bold">Data Architecture</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-primary-container text-[10px] font-bold text-primary-fixed rounded shadow-sm">Python</span>
+                                <span class="px-2 py-1 bg-primary-container text-[10px] font-bold text-primary-fixed rounded shadow-sm">Matlab</span>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-surface-container-low rounded-xl flex flex-col gap-4">
+                            <span class="material-symbols-outlined text-tertiary text-3xl">public</span>
+                            <h5 class="font-headline font-bold text-primary">Global Outreach</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white text-[10px] font-bold text-on-surface-variant rounded shadow-sm">Ethics</span>
+                                <span class="px-2 py-1 bg-white text-[10px] font-bold text-on-surface-variant rounded shadow-sm">Policy</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Achievement Timeline -->
+                <section>
+                    <h3 class="text-sm font-headline font-bold text-on-surface-variant uppercase tracking-widest mb-6">Milestone Timeline</h3>
+                    <div class="relative space-y-8 before:absolute before:left-4 before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant/30">
+                        <!-- Timeline Item -->
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-white border-2 border-secondary flex items-center justify-center z-10">
+                                <span class="material-symbols-outlined text-secondary text-sm font-['Material_Symbols_Outlined']" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                            <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent group-hover:border-secondary/20 transition-all">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="font-headline font-bold text-primary">Interstellar Research Grant Winner</h4>
+                                    <span class="text-[10px] font-bold text-on-surface-variant bg-surface-container p-1 px-2 rounded">FEB 2024</span>
+                                </div>
+                                <p class="text-sm text-on-surface-variant leading-relaxed">Awarded for breakthrough findings in zero-gravity cellular regeneration patterns across multiple mammalian species.</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item -->
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-white border-2 border-primary flex items-center justify-center z-10">
+                                <span class="material-symbols-outlined text-primary text-sm">history_edu</span>
+                            </div>
+                            <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent group-hover:border-primary/20 transition-all">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="font-headline font-bold text-primary">Published Author: Nature Orbit</h4>
+                                    <span class="text-[10px] font-bold text-on-surface-variant bg-surface-container p-1 px-2 rounded">NOV 2023</span>
+                                </div>
+                                <p class="text-sm text-on-surface-variant leading-relaxed">Lead researcher for "The Mechanics of Atmospheric Drift in Kepler-186f Simulations".</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item -->
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-white border-2 border-tertiary flex items-center justify-center z-10">
+                                <span class="material-symbols-outlined text-tertiary text-sm">school</span>
+                            </div>
+                            <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent group-hover:border-tertiary/20 transition-all">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="font-headline font-bold text-primary">Dean's List Recognition</h4>
+                                    <span class="text-[10px] font-bold text-on-surface-variant bg-surface-container p-1 px-2 rounded">MAY 2023</span>
+                                </div>
+                                <p class="text-sm text-on-surface-variant leading-relaxed">Maintained a perfect 4.0 GPA for three consecutive academic semesters in Advanced Theoretical Sciences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="mt-8 pt-8 border-t border-outline-variant/20">
+                     <div class="flex gap-4">
+                         <button onclick="toggleAlumniStatus()" class="px-6 py-3 bg-surface-container text-primary font-bold text-sm rounded-md hover:bg-surface-container-high transition-colors">
+                              Toggle Alumni Status Demo
+                         </button>
+                     </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<script>
+    // Prototype interactivity functions
+    function toggleAlumniStatus() {
+        const badge = document.getElementById('statusBadge');
+        const title = document.getElementById('studentTitle');
+        if (badge && title) {
+            if (badge.innerText === 'ACTIVE') {
+                 badge.innerText = 'PASSED OUT';
+                 badge.classList.remove('bg-surface-container-highest', 'text-primary');
+                 badge.classList.add('bg-tertiary', 'text-on-tertiary');
+                 title.innerText = 'Astrophysics Alumni (Passed Out)';
+                 alert("Alumni status updated successfully.");
+            } else {
+                 badge.innerText = 'ACTIVE';
+                 badge.classList.add('bg-surface-container-highest', 'text-primary');
+                 badge.classList.remove('bg-tertiary', 'text-on-tertiary');
+                 title.innerText = 'Astrophysics Senior Research Fellow';
+            }
+        }
+    }
+    
+    function toggleEditSkills() {
+        alert("Edit Skills Modal logic goes here. Students can use this to update their non-official fields.");
+    }
+    
+    // Attach to window so onclick works in HTML
+    window.toggleAlumniStatus = toggleAlumniStatus;
+    window.toggleEditSkills = toggleEditSkills;
+</script>

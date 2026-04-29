@@ -1,0 +1,90 @@
+---
+const pathname = Astro.url.pathname;
+
+const links = [
+    { href: '/', label: 'Feed' },
+    { href: '/achievements', label: 'Achievements' },
+    { href: '/directory', label: 'Directory' }
+];
+
+const mockNotifications = [
+    {
+        avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCQXbmd3GmGY2z4T8UytivNhefJVk4uQipWVEQLzaBO0wMLG_qxYMoDcNzqCvVELKeU1Qc-ON5RxK_0x0Ol3sWlCn_p_0hYLt1F8wNP_b3Ada1ovNHztzRKTNPe4qKaBpOy1yJ7XE_byd5AIFxLGiAbDBX4Luyqe-AAWqRRTULWFNpGfbPBbMYd8CrdHTQvOyRRLvEcMvOjdXPHdFxsJG50Sejf-Szvgs7NOkrL-jytxzg5GCbdpKNJf3leseRlQoEsQPYodFrss5s',
+        user: 'Dr. Sarah Chen',
+        action: 'mentioned you in a research abstract.',
+        time: '2m',
+        isNew: true
+    },
+    {
+        icon: 'rocket_launch',
+        bg: 'bg-cyan-100 text-cyan-600',
+        user: 'System Orbit',
+        action: 'Your snippet reached 1,000 global views! 🚀',
+        time: '1h',
+        isNew: true
+    },
+    {
+        avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuATD3YhyY7NIrDFM5oHCXOovaLyhICb4x5f6UQSOg1mY2s3wWqUhqaNMCSmfykG5C916Ev1T9UWEWCUhYTGiMHI3bs9TTOL7dYzhgBElTHDe1ZcV2P6FfWLqaHjp3xhPyT30awB-8r4eDE2rZ9KhCSVw8A_tMpHYVfH_rsr6w0JHjn7JX933s4Io8hyEv4dqJ1dJp-hrDSbrn46Lp_20uGVq541QHbl2MveBm6ZXI9m0zU_AcR8sQev4IeqENUQZ-4NJNwmsl0v4Jg',
+        user: 'Marcus Thorne',
+        action: 'started following your active directory.',
+        time: '4h',
+        isNew: false
+    }
+];
+---
+
+<header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,51,69,0.03)] border-b border-slate-200/50 dark:border-slate-800">
+    <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+        <div class="flex items-center gap-8">
+            
+            <div class="flex gap-6 font-['Space_Grotesk'] tracking-tight">
+                {links.map(link => {
+                    const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
+                    return (
+                        <a 
+                            class={`py-1 transition-all duration-200 border-b-2 ${
+                                isActive 
+                                ? 'text-cyan-600 dark:text-cyan-300 font-bold border-cyan-600' 
+                                : 'text-slate-500 dark:text-slate-400 hover:text-cyan-800 dark:hover:text-cyan-200 border-transparent hover:border-slate-300 dark:hover:border-slate-700'
+                            }`} 
+                            href={link.href}
+                        >
+                            {link.label}
+                        </a>
+                    )
+                })}
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <div class="relative hidden sm:block">
+                <input class="bg-surface-container-high border border-transparent hover:border-slate-200 dark:hover:border-slate-700 rounded-full px-5 py-2.5 text-sm w-72 focus:ring-2 focus:ring-secondary/20 focus:bg-surface-container-lowest transition-all outline-none" placeholder="Search parameters..." type="text" onkeydown="if(event.key === 'Enter') window.location.href='/search';"/>
+                <span class="material-symbols-outlined absolute right-4 top-2.5 text-slate-400 text-[20px]" data-icon="search">search</span>
+            </div>
+            <!-- Notification Link to Login -->
+            <a href="/login" class="p-2.5 text-slate-500 hover:text-cyan-700 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all relative flex items-center justify-center">
+                <span class="material-symbols-outlined text-[24px]">notifications</span>
+                <span class="absolute top-2.5 right-2 w-2 h-2 bg-rose-500 rounded-full border-2 border-white dark:border-slate-900 pointer-events-none"></span>
+            </a>
+
+            <!-- Profile Link to Login -->
+            <a href="/login" class="p-1 text-slate-500 hover:text-cyan-700 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all flex items-center justify-center">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPTx71667DEz2MogaWbi_MTN-2FAknRd5Nu_VnfpJV5KGwcAxmSUN_SdJ9UI6qoHrYBExWtDllgpMv4yjGCzEl6tdmVzKnX6fGBrzoxkr3aLYd9i-exsz16k3qy_g42PPbBi_mzEQwzP7YVuwB7vM0z_ALbx0KRZiuNAlxCgn7l6vJ9s1KcqDKB7bqXhM47bzyM39MwLBplyWQnkvESEK-PihhHYJzrraNWp1es62pw2_bjeu-4PcWXVrlletQBYpBqjvhs8vQO4c" alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm ring-2 ring-transparent hover:ring-cyan-500/50 transition-all"/>
+            </a>
+        </div>
+    </div>
+</header>
+
+
+<style>
+    /* Hide scrollbar for the notification list */
+    .hidden-scrollbar::-webkit-scrollbar {
+        width: 4px;
+    }
+    .hidden-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .hidden-scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgb(203 213 225 / 0.5); /* slate-300 loosely */
+        border-radius: 10px;
+    }
+</style>

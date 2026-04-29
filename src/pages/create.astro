@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ClientLayout from '../layouts/ClientLayout';
+import CreatePostPage from '../components/pages/CreatePage';
+---
+
+<Layout title="Orbit | Publish Discovery">
+  <ClientLayout client:load currentPath="/create">
+    <CreatePostPage client:load />
+  </ClientLayout>
+</Layout>

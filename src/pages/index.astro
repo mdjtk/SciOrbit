@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Science Orbit | Home">
+    <section class="max-w-5xl mx-auto px-6 py-12">
+        <!-- School-wide Announcement (High-Contrast Acceleration) -->
+        <div class="mb-12 relative overflow-hidden bg-primary rounded-xl p-8 text-white flex flex-col md:flex-row justify-between items-center gap-6 shadow-lg">
+            <div class="absolute top-0 left-0 w-1 h-full bg-tertiary"></div>
+            <div class="relative z-10 w-full md:w-auto">
+                <span class="inline-block px-3 py-1 bg-tertiary text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Urgent Dispatch</span>
+                <h2 class="text-2xl font-headline font-bold leading-tight max-w-xl">
+                    Science Orbit Committee: Annual Propulsion Symposium Call for Papers 2024
+                </h2>
+                <p class="mt-2 text-primary-fixed opacity-80 font-body text-sm">Submit your breakthrough research by October 15th to the Orbital Board.</p>
+            </div>
+            <button class="relative z-10 px-6 py-3 bg-white text-primary rounded-md font-bold text-sm whitespace-nowrap hover:bg-primary-fixed transition-colors">
+                Access Portal
+            </button>
+            <!-- Abstract Design Background -->
+            <div class="absolute -right-20 -top-20 w-64 h-64 border border-white/5 rounded-full"></div>
+            <div class="absolute -right-10 -top-10 w-64 h-64 border border-white/10 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Feed Stream (Left/Center) -->
+            <div class="space-y-12 lg:col-span-12">
+                <!-- Sophisticated Article Card 1 -->
+                <article class="group bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,51,69,0.06)] border border-outline-variant/30">
+                    <div class="relative h-96 overflow-hidden">
+                        <img alt="Data visualization of cosmic microwave background radiation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1Ao11yH9uoY4SjYqKK73ExZF1SjJIjD6v24rHhNvJWW-Fw1v8Fq7Cn0C1CZUgfVkQ2zVKqI1ACVrCSrzW833KI7FtZmu9yBDDukaPZmaJcd4ALtW6qKM0GnfXb0XFdSanihGwChQoTPoJJ98MiM1ucwabfJRHMdvTPTCK1jBS3zdmkdoV_gpXce9ZfKb-c-yAPV1HpZUR_f9JgR2MEX25PO2uwEbt5xRTZ7gIcWWY9in7BL_Z1GE74WTl9Z2tUWvu85074ROg7jI"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-8 right-8">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-2 py-1 bg-secondary text-on-secondary text-[10px] font-bold uppercase tracking-widest rounded">Astrophysics</span>
+                                <span class="text-white/80 text-xs font-medium">8 min read</span>
+                            </div>
+                            <h3 class="text-3xl font-headline font-bold text-white leading-tight group-hover:text-secondary-fixed transition-colors">Mapping the Untraceable: Neutrino Oscillations in the Core.</h3>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-on-surface-variant leading-relaxed mb-6 font-body">
+                            Recent observations from the Deep Space Array suggest that neutrino mass hierarchies may influence local gravity pockets more than previously modeled in the Standard Model of Particle Physics...
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center gap-1 text-on-surface-variant hover:text-secondary transition-colors cursor-pointer" onclick="window.location.href='/login'">
+                                    <span class="material-symbols-outlined text-xl" data-icon="favorite">favorite</span>
+                                    <span class="text-sm font-medium">1.2k</span>
+                                </div>
+                                <div class="flex items-center gap-1 text-on-surface-variant hover:text-secondary transition-colors cursor-pointer" onclick="window.location.href='/login'">
+                                    <span class="material-symbols-outlined text-xl" data-icon="chat_bubble">chat_bubble</span>
+                                    <span class="text-sm font-medium">84</span>
+                                </div>
+                                <div class="flex items-center gap-1 text-on-surface-variant hover:text-secondary transition-colors cursor-pointer">
+                                    <span class="material-symbols-outlined text-xl" data-icon="share">share</span>
+                                </div>
+                            </div>
+                            <button class="flex items-center gap-2 text-primary font-bold text-sm hover:text-secondary transition-colors" onclick="window.location.href='/login'">
+                                <span class="material-symbols-outlined bookmark-icon" data-icon="bookmark">bookmark</span>
+                                <span class="bookmark-text">Save for Reference</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Snippet Card (Glassmorphism inspired) -->
+                <article class="bg-surface-container-low border-l-4 border-secondary p-8 rounded-xl relative">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
+                                <img alt="Dr. Elena Rossi profile photo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF6jfM3d3ehWnvxBzB9YnAJKETcLYY_-OMwXdORCQCFGK70xuMWxOHLiY04WD8SZ6GbvFNKXNDQ3VWdiEAnHw8ifBCmvOyHe1hv4fNO36IKPHx6N1c5t_sEFCoLs-PovQ9Bz3e3bKACToy4nfAtuo75Tv-IDMdLznFhAl0pbpQLngoBAfHzKwC8SbjFKg8eD84ryYZbtRVml7LM0U7STvNh86o-_zSdqdBNQcZiZ1Y0hvNpbZSj1NG82hRW9EE0ZiZAtGtqG1Q8j4"/>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-on-surface text-sm">Dr. Elena Rossi</h4>
+                                <p class="text-xs text-on-surface-variant uppercase tracking-widest">Quantum Lab 07</p>
+                            </div>
+                        </div>
+                        <span class="text-xs text-on-surface-variant/60 font-mono">14:02 UTC</span>
+                    </div>
+                    <p class="text-xl font-headline font-medium text-cyan-900 mb-6 leading-snug italic">
+                        "The preliminary data on cold fusion in the micro-gravity chamber just hit the dashboard. We're seeing a 14% increase in containment stability. Is this the breakthrough we've been waiting for?"
+                    </p>
+                    <div class="flex gap-4">
+                        <button class="px-4 py-2 bg-white rounded-md text-xs font-bold text-secondary shadow-sm hover:bg-secondary/5 transition-colors" onclick="window.location.href='/login'">Contribute Data</button>
+                        <button class="px-4 py-2 border border-secondary/20 rounded-md text-xs font-bold text-on-surface-variant hover:bg-white transition-colors" onclick="window.location.href='/login'">View Logs</button>
+                    </div>
+                </article>
+
+                <!-- Sophisticated Article Card 2 -->
+                <article class="group bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,51,69,0.06)] border border-outline-variant/30">
+                    <div class="grid md:grid-cols-2">
+                        <div class="h-64 md:h-full overflow-hidden">
+                            <img alt="Microscope slide showing synthetic cellular structures" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfcy4cDVXZS7Y6XsuW6Nd5boq0G5hC2h1aAYcUmkLNsC22aURvb-WqFfCvioDld3yiDxEcqXeEu3xUg5ef-b59_CU0xKxkxGuYUhOfr7ohBgj03_0TPof1mRHl64CXmswThdNKQuIqXrR3F1MAC1iWJWpCYMbxaGEL7MZKhMTtAJzzg0gZpyzIy9-QfKo0utn8H1j7m9gM4k3mbdwAl75NGRmA6taqHx3ssKbfgKlaU7NHjE8UmcLWjsL5qtzR1ZZ4H3d-e5s9_zQ"/>
+                        </div>
+                        <div class="p-8 flex flex-col">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-2 py-1 bg-tertiary text-on-tertiary text-[10px] font-bold uppercase tracking-widest rounded">Bio-Engineering</span>
+                            </div>
+                            <h3 class="text-2xl font-headline font-bold text-on-surface leading-tight mb-4 group-hover:text-secondary transition-colors">
+                                Synthetic Biology in Vacuum: Adapting Tissue for Orbital Life.
+                            </h3>
+                            <p class="text-sm text-on-surface-variant leading-relaxed mb-6 flex-grow">
+                                Investigigating how engineered cellular matrices behave when subjected to chronic low-Earth orbit radiation and zero-G pressure differentials...
+                            </p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1 text-on-surface-variant hover:text-secondary transition-colors cursor-pointer" onclick="window.location.href='/login'">
+                                        <span class="material-symbols-outlined text-lg" data-icon="thumb_up">thumb_up</span>
+                                        <span class="text-xs">432</span>
+                                    </div>
+                                    <div class="flex items-center gap-1 text-on-surface-variant hover:text-secondary transition-colors cursor-pointer" onclick="window.location.href='/login'">
+                                        <span class="material-symbols-outlined text-lg" data-icon="forum">forum</span>
+                                        <span class="text-xs">12</span>
+                                    </div>
+                                </div>
+                                <button class="p-2 text-on-surface-variant hover:bg-slate-100 rounded-full transition-all">
+                                    <span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<script>
+
+</script>
